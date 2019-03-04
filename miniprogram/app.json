@@ -1,13 +1,42 @@
 {
-  "pages": [
-    "pages/index/index",
-		"pages/unnet/unnet"
-  ],
-  "window": {
-    "backgroundColor": "#ffa5a5",
-    "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#ffa5a5",
-    "navigationBarTitleText": "梦佳冲鸭",
-    "navigationBarTextStyle": "white"
-  }
+	"pages": [
+		"pages/index/index",
+		"pages/build/build",
+		"pages/me/me",
+		"pages/unnet/unnet"		
+	],
+	"window": {
+		"backgroundColor": "#ffa5a5",
+		"backgroundTextStyle": "light",
+		"navigationBarBackgroundColor": "#ffa5a5",
+		"navigationBarTitleText": "梦佳冲鸭",
+		"navigationBarTextStyle": "white"
+	},
+	"tabBar": {
+		"color": "#D3D3D3",
+		"selectedColor": "#ffa5a5",
+		"borderStyle": "black",
+		"backgroundColor": "#fff",
+		"box-shadow": "0 0 6px 0",
+		"list": [
+			{
+				"pagePath": "pages/index/index",
+				"text": "目标进展",
+				"iconPath": "images/tabBar/index.png",
+				"selectedIconPath": "images/tabBar/selectIndex.png"
+			},
+			{
+				"pagePath": "pages/build/build",
+				"text": "建立目标",
+				"iconPath": "images/tabBar/build.png",
+				"selectedIconPath": "images/tabBar/selectBuild.png"
+			},
+			{
+				"pagePath": "pages/me/me",
+				"text": "我的相关",
+				"iconPath": "images/tabBar/me.png",
+				"selectedIconPath": "images/tabBar/selectMe.png"
+			}
+		]
+	}
 }
