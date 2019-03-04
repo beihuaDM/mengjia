@@ -1,12 +1,13 @@
 {
   "pages": [
-    "pages/index/index"
+    "pages/index/index",
+		"pages/unnet/unnet"
   ],
   "window": {
-    "backgroundColor": "#F6F6F6",
+    "backgroundColor": "#ffa5a5",
     "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#F6F6F6",
+    "navigationBarBackgroundColor": "#ffa5a5",
     "navigationBarTitleText": "梦佳冲鸭",
-    "navigationBarTextStyle": "black"
+    "navigationBarTextStyle": "white"
   }
 }

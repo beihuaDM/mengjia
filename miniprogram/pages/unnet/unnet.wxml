@@ -1,0 +1,21 @@
+<view class='containers'>
+	<view class="chest">
+    <view class="heart left sided top"></view>
+    <view class="heart center"></view>
+    <view class="heart right sided"></view>
+	</view>
+	<view class='block'>
+		
+		<view class='text'>
+			遇见你比自动连上wifi还幸运！
+		</view>
+
+		<van-button
+			block
+			bindtap="goToIndex"
+		 type="danger">
+		点我呀点我呀
+		</van-button>
+
+	</view>
+</view>

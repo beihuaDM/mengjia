@@ -1,2 +1,1 @@
-<view>1234</view>
-<van-button type="info">信息按钮</van-button>
+<view class="container"></view>
