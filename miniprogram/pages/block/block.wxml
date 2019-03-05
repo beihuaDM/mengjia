@@ -1,0 +1,11 @@
+<van-card
+	wx:for="{{ data}}"
+	wx:key="{{item.expect}}"
+	item="{{item}}"
+  desc="{{item.expect}}"
+  title="{{item.targetName}}"
+  thumb="{{ imageURL }}"
+	tag="{{item.progress === 0 ? '要加油咯'  : '梦佳好棒'}}"
+	price="开始时间:{{item.startDate}}  结束时间:{{item.endDate}}"
+>
+</van-card>

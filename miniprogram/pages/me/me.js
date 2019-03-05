@@ -76,7 +76,54 @@ Page({
 
 	// 点击每一项
 	onClick:function (e) {
+		const db = wx.cloud.database()
 		const item = e.currentTarget.dataset.item;
-		console.log(item);
+		if(item.name === "全部目标") {
+			db.collection('target')
+				.get()
+				.then(res => {
+					const data = JSON.stringify(res.data);
+					wx.navigateTo({
+						url: '/pages/block/block?data=' + data + '',
+					})
+				})
+				.catch(err => {
+					console.error(err)
+				})
+		}
+		else if (item.name === "已完成目标") {
+			db.collection('target')
+				.where({
+					progress: 1,
+				})
+				.get()
+				.then(res => {
+					const data = JSON.stringify(res.data);
+					wx.navigateTo({
+						url: '/pages/block/block?data=' + data + '',
+					})
+				})
+				.catch(err => {
+					console.error(err)
+				})
+
+				
+		}
+		else if (item.name === "未完成目标") {
+			db.collection('target')
+				.where({
+					progress: 0,
+				})
+				.get()
+				.then(res => {
+					const data = JSON.stringify(res.data);
+					wx.navigateTo({
+						url: '/pages/block/block?data=' + data + '',
+					})
+				})
+				.catch(err => {
+					console.error(err)
+				})
+		}
 	}
 })

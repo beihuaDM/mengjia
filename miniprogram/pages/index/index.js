@@ -111,7 +111,25 @@ Page({
 	// 确定搜索时触发
 	onSearch:function () {
 		const { search } = this.data;
-		console.log(search);
+		const db = wx.cloud.database()
+		db.collection('target')
+			.where({
+				targetName: new db.RegExp({
+					regexp: search,
+					options: 'i',
+				})
+			})
+			.get()
+			.then(res => {
+				const data = JSON.stringify(res.data);
+				wx.navigateTo({
+					url: '/pages/block/block?data='+data+'',
+				})
+			})
+			.catch(err => {
+				console.error(err)
+			})
+
 		
 	},
 

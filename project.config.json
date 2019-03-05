@@ -12,7 +12,7 @@
 	},
 	"appid": "wx584e0374e1ece67f",
 	"projectname": "mengjia",
-	"libVersion": "2.2.5",
+	"libVersion": "2.6.1",
 	"condition": {
 		"search": {
 			"current": -1,

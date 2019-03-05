@@ -4,7 +4,9 @@
 		"pages/index/index",
 		"pages/build/build",
 		"pages/me/me",
-		"pages/unnet/unnet"		
+		"pages/unnet/unnet",
+		"pages/block/block",
+		"pages/detail/detail"		
 	],
 	"window": {
 		"backgroundColor": "#ffa5a5",

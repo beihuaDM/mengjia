@@ -21,6 +21,7 @@
 		 size='small'
 		 round 
 		 type="danger"
+		 bind:click="onSearch"
 		 >搜一下吧
 		 </van-button>
 	</view>
@@ -56,6 +57,8 @@
 	
 	<van-card
 	centered
+	item="{{item}}"
+	wx:key="{{item.expect}}"
 	wx:for="{{ allTarget}}"
   desc="{{item.expect}}"
   title="{{item.targetName}}"
@@ -69,6 +72,8 @@
   <van-tab title="已完成">
 	<van-card
 	wx:for="{{ finishTarget}}"
+	wx:key="{{item.expect}}"
+	item="{{item}}"
   desc="{{item.expect}}"
   title="{{item.targetName}}"
   thumb="{{ imageURL }}"
@@ -80,6 +85,8 @@
   <van-tab title="进行中">
 	<van-card
 	wx:for="{{ ingTarget}}"
+	wx:key="{{item.expect}}"
+	item="{{item}}"
   desc="{{item.expect}}"
   title="{{item.targetName}}"
   thumb="{{ imageURL }}"
