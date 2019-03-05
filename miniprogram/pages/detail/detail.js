@@ -65,5 +65,38 @@ Page({
 	 */
 	onShareAppMessage: function () {
 
+	},
+
+	onChange:function (e) {
+		const { data } = this.data;
+		const { detail } = e;
+		var that = this;
+
+		wx.showModal({
+			title: '提示',
+			content: '确定要切换目标动态呀？',
+			success: res => {
+				if (res.confirm) {
+					const db = wx.cloud.database();
+					db.collection('target').doc(data._id).update({
+						// data 传入需要局部更新的数据
+						data: {
+							// 表示将 done 字段置为 true
+							progress: !data.progress
+						}
+					})
+						.then(() => {
+							db.collection('target').where({
+								_openid: data._openid
+							}).get().then(res => {
+								that.setData({
+									data:res.data
+								});
+							})
+						})
+						.catch(console.error)
+				}
+			}
+		});
 	}
 })

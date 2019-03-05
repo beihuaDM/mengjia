@@ -1,2 +1,23 @@
-<!--pages/detail/detail.wxml-->
-<text>pages/detail/detail.wxml</text>
+<van-panel
+
+ title="目标详细信息"
+ desc="你知道吗？我不想做你的路人，我想做你余生故事里的人。" 
+ >
+  <view class='detail'>
+	<van-switch
+	style="position:absolute;right:50rpx;top:20rpx"
+	size="40rpx"
+  checked="{{ data.progress }}"
+  active-color="#ffa5a5"
+  inactive-color="#d3d3d3"
+	bind:change="onChange"
+/>
+		<text class='switch'>点击切换目标是否实现</text>
+		<text>目标名称:{{data.targetName}}</text>
+		<text>开始时间:{{data.startDate}}</text>
+		<text>结束时间:{{data.endDate}}</text>
+		<text>预期效果:{{data.expect}}</text>
+		<text>预期效果:{{data.expect}}</text>
+		<text>实践步骤:{{data.plan}}</text>
+	</view>
+</van-panel>
