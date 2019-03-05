@@ -1,0 +1,11 @@
+<view class='userInfo'>
+	<text>
+	张女士，微信小程序要求在使用的时候需要你授权一下才能使用它哦！点击下方的按钮就可以啦！剩下的交给你窦先生啦。
+	</text>
+	<button
+  open-type="getUserInfo"
+  bindgetuserinfo="bindGetUserInfo"
+>
+  张女士点我授权登录
+</button>
+</view>

@@ -5,8 +5,18 @@ App({
 			console.error('请使用 2.2.3 或以上的基础库以使用云能力')
 		} else {
 			wx.cloud.init({
+				env: 'mengjia-2f984a',
 				traceUser: true,
 			});
+			wx.getSetting({
+				success(res) {
+					if (res.authSetting['scope.userInfo']) {
+						wx.switchTab({
+							url: '/pages/index/index'
+						})
+					}
+				}
+			})
 			/**
      * 初次加载判断网络情况
      * 无网络状态下根据实际情况进行调整

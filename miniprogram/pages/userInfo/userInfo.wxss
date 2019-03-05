@@ -1,0 +1,16 @@
+.userInfo {
+	padding: 30rpx;
+}
+.userInfo text {
+	display: block;
+	color: #A9A9A9;
+	font-size: 30rpx;
+	line-height: 40rpx;
+	font-weight: 500;
+	margin-bottom: 30rpx;
+}
+
+.userInfo button {
+	background-color: #ffa5a5;
+	color: white;
+}
