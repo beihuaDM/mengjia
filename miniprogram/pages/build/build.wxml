@@ -3,6 +3,29 @@
   mode="closeable"
   text="我的骄傲在你面前变得那么卑微 而你却成了我一生追求的目标"
 />
+
+<!-- 天气预报 -->
+<van-collapse value="{{ activeNames }}" bind:change="onWeatherChange">
+  <van-collapse-item title="张女士，请注意关注天气" name="1">
+    <view class='weatherBlock'>
+			<text class='city'>{{weather.city}}</text>
+			<view class='realtime'>
+				实时情况:当前室外温度{{weather.realtime.temperature}}℃，湿度{{weather.realtime.humidity}}，天气{{weather.realtime.info}},{{weather.realtime.direct}}{{weather.realtime.power}}
+			</view>
+			<view class='future'>
+				未来趋势：
+				<view class='future_block' wx:for="{{weather.future}}" wx:key="{{item.date}}">
+					{{item.date}}:气温{{item.temperature}},天气{{item.weather}},{{item.direct}}
+				</view>
+			</view>
+			<view class='tip'>
+				张女士，出门前请掌握天气情况哦！
+			</view>	
+		</view>
+  </van-collapse-item>
+</van-collapse>
+
+
 <!-- 目标标题 -->
 <van-panel
  title="建立目标"

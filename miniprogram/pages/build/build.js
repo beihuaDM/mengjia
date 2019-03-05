@@ -5,6 +5,7 @@ Page({
 	 * 页面的初始数据
 	 */
 	data: {
+		activeNames:['1'],
 		show:true,
 		targetName:'',
 		startDateChoose:false,
@@ -24,7 +25,20 @@ Page({
 	 * 生命周期函数--监听页面加载
 	 */
 	onLoad: function (options) {
-
+		var that = this;
+		wx.request({
+			url: 'https://apis.juhe.cn/simpleWeather/query',
+			method: "GET",
+			data: {
+				key: "c633cac025ac98c2af7be7401466b721",
+				city:"石家庄"
+			},
+			success: function (res) {
+				that.setData({
+					weather:res.data.result
+				});
+			}
+		})
 	},
 
 	/**
@@ -235,5 +249,12 @@ Page({
 			}
 		}
 		
+	},
+
+	// 天气预报下拉
+	onWeatherChange:function(event) {
+		this.setData({
+			activeNames: event.detail
+		});
 	}
 })

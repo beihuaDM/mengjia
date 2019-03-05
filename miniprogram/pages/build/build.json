@@ -5,6 +5,8 @@
 		"van-popup": "vant-weapp/popup/index",
 		"van-button": "vant-weapp/button/index",
 		"van-dialog": "vant-weapp/dialog/index",
+		"van-collapse": "vant-weapp/collapse/index",
+		"van-collapse-item": "vant-weapp/collapse-item/index",
 		"van-datetime-picker": "vant-weapp/datetime-picker/index",
 		"van-notice-bar": "vant-weapp/notice-bar/index"
 	}
