@@ -1,1 +1,57 @@
-/* pages/me/me.wxss */
+.avatarNick {
+	width: 100%;
+	height: 200rpx;
+	background:linear-gradient(3deg,transparent 50rpx, #ffa5a5 0);
+	position: relative;
+}
+
+.avatar {
+	position: absolute;
+	bottom: -10rpx;
+	display: inline-block;
+	width: 150rpx;
+	height: 150rpx;
+	border-radius: 50%;
+
+}
+.nickName {
+	position: absolute;
+	bottom: 80rpx;
+	left: 200rpx;
+	display: inline-block;
+	color: white;
+	font-size: 30rpx;
+	font-weight: 500;
+}
+.function {
+	width: 100%;
+	margin-top: 50rpx;
+}
+.block {
+	width: 100%;
+	padding: 20rpx;
+	height: 60rpx;
+	border-bottom: 1px solid #d3d3d3;
+}
+.block_image {
+	display: inline-block;
+	width: 40rpx;
+	height: 40rpx;
+	margin-left: 20rpx;
+
+}
+
+.block_text {
+	display: inline-block;
+	width: 200rpx;
+	margin-left: 20rpx;
+	color: #999;
+	font-size: 30rpx;
+	font-weight: 500;
+
+}
+
+#icon {
+	color: #d3d3d3;
+	margin-left: 350rpx;
+}

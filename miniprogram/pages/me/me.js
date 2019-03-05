@@ -1,18 +1,28 @@
 // pages/me/me.js
+
+const classify = require('./constant.js');
 Page({
 
 	/**
 	 * 页面的初始数据
 	 */
 	data: {
-
+		userInfo:{}
 	},
 
 	/**
 	 * 生命周期函数--监听页面加载
 	 */
 	onLoad: function (options) {
-
+		var that = this;
+		wx.getUserInfo({
+			success(res) {
+				that.setData({
+					classify:classify,
+					userInfo:res.userInfo
+				});
+			}
+		})
 	},
 
 	/**
@@ -62,5 +72,11 @@ Page({
 	 */
 	onShareAppMessage: function () {
 
+	},
+
+	// 点击每一项
+	onClick:function (e) {
+		const item = e.currentTarget.dataset.item;
+		console.log(item);
 	}
 })

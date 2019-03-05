@@ -1,0 +1,22 @@
+<!-- 用户头像及昵称 -->	
+<view class='avatarNick'>
+	<image
+	 src='{{userInfo.avatarUrl}}'
+	 class='avatar'
+	 ></image>
+	<text
+	 class='nickName'
+	>{{userInfo.nickName}}</text>
+</view>
+
+<!-- 选项区 -->
+<view class='function'>
+	<view class='block' wx:for="{{classify}}"
+	wx:key="{{item.icon}}" bindtap="onClick"
+	data-item="{{item}}"
+	>
+		<image class='block_image' src='{{item.icon}}'></image>
+		<text class='block_text'>{{item.name}}</text>
+		<van-icon id="icon" name="arrow" />
+	</view>
+</view>
