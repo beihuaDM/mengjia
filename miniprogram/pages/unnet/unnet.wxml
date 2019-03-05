@@ -7,7 +7,7 @@
 	<view class='block'>
 		
 		<view class='text'>
-			遇见你比自动连上wifi还幸运！
+			遇见你比自动连上wifi还幸运
 		</view>
 
 		<van-button

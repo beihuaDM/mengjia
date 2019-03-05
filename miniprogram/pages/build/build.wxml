@@ -1,2 +1,97 @@
-<!--pages/build/build.wxml-->
-<text>pages/build/build.wxml</text>
+<!-- 通告栏 -->
+<van-notice-bar
+  mode="closeable"
+  text="我的骄傲在你面前变得那么卑微 而你却成了我一生追求的目标"
+/>
+<!-- 目标标题 -->
+<van-panel
+ title="建立目标"
+  desc="呀！我听说张女士要建立目标啦！不错不错，值得鼓励">
+
+	<!-- 目标内容输入 -->
+	<van-popup show="{{ show }}">
+		<view class='targetPopup'>
+			嗯。。。张女士，既然要建立目标了，就要认真的去执行呀！
+			窦先生可是一直在的哦！被发现了，O(∩_∩)O ，那就不
+			好玩了哟！
+		</view>
+	</van-popup>
+
+	<!-- 时间选择控件 -->
+	<!-- 开始时间选择 -->
+	<van-popup
+		show="{{ startDateChoose }}"
+		position="bottom"
+		bind:close="onClose"
+	>
+		<van-datetime-picker
+			type="date"
+			value="{{ currentDate }}"
+			min-date="{{ minDate }}"
+			bind:confirm="onStartConfirmDate"
+			bind:cancel="onClose"
+		/>
+	</van-popup>
+
+	<!-- 结束时间选择 -->
+	<van-popup
+		show="{{ endDateChoose }}"
+		position="bottom"
+		bind:close="onClose"
+	>
+		<van-datetime-picker
+			type="date"
+			value="{{ currentDate }}"
+			min-date="{{ minDate }}"
+			bind:confirm="onEndConfirmDate"
+			bind:cancel="onClose"
+		/>
+	</van-popup>
+	
+  <view class='buildTarget'>
+		<van-cell-group>
+			<van-field
+				value="{{ targetName }}"
+				label="目标名称"
+				bind:change="onTargetChange"
+				placeholder="给你的目标起个名字吧！"
+			/>
+			<van-field
+				value="{{ startDate }}"
+				label="开始时间"
+				bindtap="startDateChoose"
+				placeholder="准备什么时间开始呀？"
+			/>
+			<van-field
+				value="{{ endDate }}"
+				label="结束时间"
+				bindtap="endDateChoose"
+				placeholder="准备什么时间结束呀？"
+			/>
+			<van-field
+				value="{{ expect }}"
+				label="预期效果"
+				type="textarea"
+				placeholder="梦佳说一说你想达成什么样的成就吧！"
+				autosize
+				bind:change="onExpectChange"
+			/>
+			<van-field
+				value="{{ plan }}"
+				label="实践步骤"
+				type="textarea"
+				placeholder="你怎么样去完成呢？"
+				autosize
+				bind:change="onPlanChange"
+			/>
+		</van-cell-group>
+		<view class='btn'>
+			<van-button
+			 bind:click="submit"
+			 type="danger">建立目标最后一步！快快点我吧				      </van-button>
+		</view>
+		
+	</view>
+</van-panel>
+<!-- 消息确认 -->
+<van-dialog id="van-dialog" />

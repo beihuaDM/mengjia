@@ -26,7 +26,7 @@
 
 	<van-panel
 	 title="每日笑话"
-	 desc="张女士，再搞笑的笑话，也不如你的微笑甜美"
+	 desc="梦佳，再搞笑的笑话，也不如你的微笑甜美"
 	>
   <view class='joke'>
 		{{joke[current].content}}
