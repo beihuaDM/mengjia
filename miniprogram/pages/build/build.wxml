@@ -118,3 +118,5 @@
 </van-panel>
 <!-- 消息确认 -->
 <van-dialog id="van-dialog" />
+<!-- 消息提示 -->
+<van-toast id="van-toast" />

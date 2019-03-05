@@ -1,4 +1,5 @@
 import Dialog from 'vant-weapp/dialog/dialog';
+import Toast from 'vant-weapp/toast/toast';
 Page({
 
 	/**
@@ -231,6 +232,24 @@ Page({
 						message: '哼~实践步骤没有写被我发现了吧。不过嘛，就让你通过咯，请张女士点击确认来建立自己的目标哦！'
 					}).then(() => {
 						// on confirm  数据存储至数据库
+						const db = wx.cloud.database();
+						db.collection('target').add({
+							// data 字段表示需新增的 JSON 数据
+							data: {
+								targetName,
+								startDate,
+								startDateChuo,
+								endDate,
+								endDateChuo,
+								expect,
+								plan,
+								progress:0
+							}
+						})
+							.then(res => {
+								Toast.success('建立目标成功啦！张女士加油加油！');
+							})
+							.catch(console.error)
 
 					}).catch(() => {
 						// on cancel
@@ -241,6 +260,24 @@ Page({
 						message: '呀！请张女士点击确认来建立自己的目标吧！'
 					}).then(() => {
 						// on confirm  把上面的代码粘贴一遍，数据存储
+						const db = wx.cloud.database();
+						db.collection('target').add({
+							// data 字段表示需新增的 JSON 数据
+							data: {
+								targetName,
+								startDate,
+								startDateChuo,
+								endDate,
+								endDateChuo,
+								expect,
+								plan,
+								progress: 0
+							}
+						})
+							.then(res => {
+								Toast.success('建立目标成功啦！张女士加油加油！');
+							})
+							.catch(console.error)
 
 					}).catch(() => {
 						// on cancel

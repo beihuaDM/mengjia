@@ -52,8 +52,41 @@
 <van-tabs
  active="{{ active }}"
  bind:change="onTabChange">
-  <van-tab title="全部目标">内容 1</van-tab>
-  <van-tab title="已完成">内容 2</van-tab>
-  <van-tab title="进行中">内容 3</van-tab>
+  <van-tab title="全部目标">
+	
+	<van-card
+	centered
+	wx:for="{{ allTarget}}"
+  desc="{{item.expect}}"
+  title="{{item.targetName}}"
+  thumb="{{ imageURL }}"
+	tag="{{item.progress === 0 ? '要加油咯'  : '梦佳好棒'}}"
+
+	price="开始时间:{{item.startDate}}  结束时间:{{item.endDate}}"
+>
+</van-card>	
+	</van-tab>
+  <van-tab title="已完成">
+	<van-card
+	wx:for="{{ finishTarget}}"
+  desc="{{item.expect}}"
+  title="{{item.targetName}}"
+  thumb="{{ imageURL }}"
+	tag="{{item.progress === 0 ? '要加油咯'  : '梦佳好棒'}}"
+	price="开始时间:{{item.startDate}}  结束时间:{{item.endDate}}"
+>
+</van-card>
+	</van-tab>
+  <van-tab title="进行中">
+	<van-card
+	wx:for="{{ ingTarget}}"
+  desc="{{item.expect}}"
+  title="{{item.targetName}}"
+  thumb="{{ imageURL }}"
+	tag="{{item.progress === 0 ? '要加油咯'  : '梦佳好棒'}}"
+	price="开始时间:{{item.startDate}}  结束时间:{{item.endDate}}"
+>
+</van-card>
+	</van-tab>
 </van-tabs>
 

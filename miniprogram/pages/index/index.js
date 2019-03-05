@@ -7,10 +7,14 @@ Page({
 	 * 页面的初始数据
 	 */
 	data: {
+		imageURL:'/images/WechatIMG5.jpeg',
 		search:'',
 		joke:[],
 		current:0,
-		active:1
+		active:0,
+		allTarget:[],
+		finishTarget:[],
+		ingTarget:[]
 	},
 
 	/**
@@ -34,6 +38,18 @@ Page({
 				});
 			}	
 		})
+
+		const db = wx.cloud.database()
+		db.collection('target')
+			.get()
+			.then(res => {
+				that.setData({
+					allTarget:res.data
+				});
+			})
+			.catch(err => {
+				console.error(err)
+			})
 	},
 
 	/**
@@ -140,10 +156,54 @@ Page({
 	onTabChange: function (e) {
 		var that = this;
 		const { index } = e.detail;
-		console.log(index);
+		const db = wx.cloud.database()
+		console.log(typeof index);
 		/**
 		 * index  0:全部目标  1:已完成  2:进行中
 		 * 根据index不同从数据库去检索不同的数据
+		 * 
+		 * progress: 0 进行中  1 已完成  
 		 */
+		if(index === 0) {
+			db.collection('target')
+				.get()
+				.then(res => {
+					that.setData({
+						allTarget: res.data
+					});
+				})
+				.catch(err => {
+					console.error(err)
+				})
+		}
+		else if(index === 1) {
+			db.collection('target')
+				.where({
+					progress: 1, 
+				})
+				.get()
+				.then(res => {
+					that.setData({
+						finishTarget: res.data
+					});
+				})
+				.catch(err => {
+					console.error(err)
+				})
+		} else {
+			db.collection('target')
+				.where({
+					progress: 0,
+				})
+				.get()
+				.then(res => {
+					that.setData({
+						ingTarget: res.data
+					});
+				})
+				.catch(err => {
+					console.error(err)
+				})
+		}
 	}
 })
