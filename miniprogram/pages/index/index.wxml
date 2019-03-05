@@ -1,3 +1,56 @@
-<view class="container">
-	
+		<van-notice-bar
+	left-icon="https://img.yzcdn.cn/1.png"
+  text="梦佳，要开心快乐每一天呀！有烦恼找窦先生，fighting！"
+/>
+	<!-- 搜索目标 -->
+	<view class='searchTarget'>
+		<view class='search'>
+      <van-search
+			 value="{{ search }}"
+			 placeholder="梦佳想找什么目标呀"
+			 background="#ffa5a5"
+			 bind:change="onChange"
+			 bind:search="onSearch"
+  		 bind:cancel="onCancel"
+			/>
+    </view>
+		<van-button
+		 size='small'
+		 round 
+		 type="danger"
+		 >搜一下吧
+		 </van-button>
+	</view>
+
+	<!--每日笑话-->
+
+	<van-panel
+	 title="每日笑话"
+	 desc="张女士，再搞笑的笑话，也不如你的微笑甜美"
+	>
+  <view class='joke'>
+		{{joke[current].content}}
+	</view>
+</van-panel>
+
+<!-- 换笑话 -->
+<view class='switchJoke'>
+	<van-button
+	 size="small"
+	 bind:click="lastJoke"
+	 >上一个</van-button>
+	<van-button
+	 size="small"
+	 bind:click="nextJoke"
+	 >下一个</van-button>
 </view>
+
+<!-- 个人目标 -->
+<van-tabs
+ active="{{ active }}"
+ bind:change="onTabChange">
+  <van-tab title="全部目标">内容 1</van-tab>
+  <van-tab title="已完成">内容 2</van-tab>
+  <van-tab title="进行中">内容 3</van-tab>
+</van-tabs>
+

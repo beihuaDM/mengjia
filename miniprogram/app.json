@@ -17,7 +17,6 @@
 		"selectedColor": "#ffa5a5",
 		"borderStyle": "black",
 		"backgroundColor": "#fff",
-		"box-shadow": "0 0 6px 0",
 		"list": [
 			{
 				"pagePath": "pages/index/index",

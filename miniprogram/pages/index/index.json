@@ -1,5 +1,10 @@
 {
   "usingComponents": {
-		"van-button": "vant-weapp/button/index"
+		"van-button": "vant-weapp/button/index",
+		"van-search": "vant-weapp/search/index",
+		"van-notice-bar": "vant-weapp/notice-bar/index",
+		"van-panel": "vant-weapp/panel/index",
+		"van-tab": "vant-weapp/tab/index",
+		"van-tabs": "vant-weapp/tabs/index"
 	}
 }

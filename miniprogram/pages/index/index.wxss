@@ -1,0 +1,24 @@
+.searchTarget {
+	width: 100%;
+	height: 100rpx;
+	background-color: #ffa5a5;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+.joke {
+	height: 200rpx;
+	overflow-y: scroll;
+	padding: 30rpx;
+	font-size: 32rpx;
+	line-height: 55rpx;
+
+}
+
+.switchJoke {
+	padding: 30rpx;
+	display: flex;
+	justify-content: space-between;
+}
+
+
