@@ -1,0 +1,35 @@
+<van-dialog id="van-dialog" />
+
+<van-panel
+ title="窦先生对你说"
+ desc="只要有你微笑的地方，都会显得特别温暖。"
+ >
+  <view class='content'>
+		
+		梦佳，我答应你的给你做微信小程序，不知道你在体验的过程中如何呢？哈哈，如果有bug随时给我提啊！一定保证您的用户体验。这款产品是不能和别人共享的，因为我的添加权限里只有你一人，所以哈哈，当然是只为你一人服务的啦。
+		
+		
+梦佳，虽然我们认识不久，但我相信，我们会走的很长。这世上总有一个人会一直等你，无论在什么时候，无论在什么地方。
+		
+	</view>
+</van-panel>
+
+<van-panel
+ title="我想对窦先生说" 
+ desc="我是为你而来，不在乎穿越绵绵山脉。" 
+ >
+  <view class='tip'>
+		<textarea
+		auto-height
+		auto-focus
+		bindinput="onChange"
+		maxlength="-1"
+		value='{{text}}'
+		 class='input'
+		 placeholder="梦佳，有什么想对我说的吗？"
+		 >
+		
+		</textarea>
+		<button bindtap='onClick'>有什么话快快发给窦先生吧！</button>
+	</view>
+</van-panel>

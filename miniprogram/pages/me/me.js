@@ -124,6 +124,10 @@ Page({
 				.catch(err => {
 					console.error(err)
 				})
+		} else {
+			wx.navigateTo({
+				url: '/pages/contact/contact'
+			})
 		}
 	}
 })

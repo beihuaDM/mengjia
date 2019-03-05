@@ -6,7 +6,8 @@
 		"pages/me/me",
 		"pages/unnet/unnet",
 		"pages/block/block",
-		"pages/detail/detail"		
+		"pages/detail/detail",
+		"pages/contact/contact"		
 	],
 	"window": {
 		"backgroundColor": "#ffa5a5",
