@@ -1,23 +1,40 @@
-<van-panel
+<van-dialog id="van-dialog" />
+<van-toast id="van-toast" />
 
- title="目标详细信息"
- desc="你知道吗？我不想做你的路人，我想做你余生故事里的人。" 
+<view
+ class='detail'
  >
-  <view class='detail'>
-	<van-switch
-	style="position:absolute;right:50rpx;top:20rpx"
-	size="40rpx"
-  checked="{{ data.progress }}"
-  active-color="#ffa5a5"
-  inactive-color="#d3d3d3"
-	bind:change="onChange"
-/>
-		<text class='switch'>点击切换目标是否实现</text>
-		<text>目标名称:{{data.targetName}}</text>
-		<text>开始时间:{{data.startDate}}</text>
-		<text>结束时间:{{data.endDate}}</text>
-		<text>预期效果:{{data.expect}}</text>
-		<text>预期效果:{{data.expect}}</text>
-		<text>实践步骤:{{data.plan}}</text>
+	<view class='startdate'>{{data.startDate}}</view>
+	<view>梦佳小姐定下了自己的flag{{data.targetName}}</view>
+	<view>我并不知道是否按时认真的完成</view>
+	<view>但我知道你的截止日期是{{data.endDate}}</view>
+	<view>我们都是地球上普通的一员</view>
+	<view>我们都有着自己梦想，并积极的努力着</view>
+	<view>梦佳小姐关于这个目标的预期效果如下</view>
+	<view>{{data.expect}}</view>
+
+	<block wx:if="{{data.plan&&data.plan.length>0}}">
+		<view>那么是否按计划完成呢？还是没有计划？</view>
+	<view>记得当时梦佳小姐定下这个目标的计划如下</view>
+	<view>{{data.plan}}</view>
+	</block>
+
+	<block wx:else>
+		<view>梦佳小姐当初并没有制定相应的计划</view>
+		<view>也好，梦想总是不被束缚的，尽力就好</view>
+	</block>
+
+	<block wx:if="{{data.progress === 0}}">
+	<view>
+	现在距离目标完成还剩<text>{{day}}</text>天
 	</view>
-</van-panel>
+	<view>如果目标完成了，就在下面打卡吧！</view>
+
+	<button bindtap="onClick">打卡完成该目标</button>
+	</block>
+
+	<block wx:if="{{data.progress === 1}}">
+	<view style="height:100rpx;line-height:100rpx;font-size:60rpx">而现在我要告诉你</view>
+		<view  style="height:100rpx;line-height:100rpx;font-size:60rpx">这个目标已经完成啦！</view>
+	</block>
+</view>

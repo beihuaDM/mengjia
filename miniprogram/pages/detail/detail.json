@@ -1,6 +1,6 @@
 {
   "usingComponents": {
-		"van-panel": "vant-weapp/panel/index",
-		"van-switch": "vant-weapp/switch/index"
+		"van-dialog": "vant-weapp/dialog/index",
+		"van-toast": "vant-weapp/toast/index"
 	}
 }
