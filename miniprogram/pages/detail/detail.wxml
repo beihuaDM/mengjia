@@ -5,22 +5,22 @@
  class='detail'
  >
 	<view class='startdate'>{{data.startDate}}</view>
-	<view>梦佳小姐定下了自己的flag{{data.targetName}}</view>
+	<view>佳佳小姐定下了自己的flag{{data.targetName}}</view>
 	<view>我并不知道是否按时认真的完成</view>
 	<view>但我知道你的截止日期是{{data.endDate}}</view>
 	<view>我们都是地球上普通的一员</view>
 	<view>我们都有着自己梦想，并积极的努力着</view>
-	<view>梦佳小姐关于这个目标的预期效果如下</view>
+	<view>佳佳小姐关于这个目标的预期效果如下</view>
 	<view>{{data.expect}}</view>
 
 	<block wx:if="{{data.plan&&data.plan.length>0}}">
 		<view>那么是否按计划完成呢？还是没有计划？</view>
-	<view>记得当时梦佳小姐定下这个目标的计划如下</view>
+	<view>记得当时佳佳小姐定下这个目标的计划如下</view>
 	<view>{{data.plan}}</view>
 	</block>
 
 	<block wx:else>
-		<view>梦佳小姐当初并没有制定相应的计划</view>
+		<view>佳佳小姐当初并没有制定相应的计划</view>
 		<view>也好，梦想总是不被束缚的，尽力就好</view>
 	</block>
 

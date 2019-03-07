@@ -223,7 +223,7 @@ Page({
 		else {
 			if ((startDateChuo - endDateChuo) > 0) {
 				Dialog.alert({
-					message: '梦佳，开始时间和结束时间是不是选反了呀'
+					message: '佳佳，开始时间和结束时间是不是选反了呀'
 				})
 			} else {
 				if(!plan) {

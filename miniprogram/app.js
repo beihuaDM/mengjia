@@ -18,7 +18,7 @@ App({
 					if (networkType === 'none') {
 						that.globalData.isConnected = false
 						wx.showToast({
-							title: '网断了哟梦佳',
+							title: '网断了哟佳佳',
 							icon: 'loading',
 							duration: 2000
 						});
@@ -34,7 +34,7 @@ App({
 				if (!res.isConnected) {
 					that.globalData.isConnected = false
 					wx.showToast({
-						title: '网断了哟梦佳',
+						title: '网断了哟佳佳',
 						icon: 'loading',
 						duration: 2000,
 						complete: function () {

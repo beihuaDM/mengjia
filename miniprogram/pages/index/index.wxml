@@ -3,14 +3,14 @@
 
 		<van-notice-bar
 	left-icon="https://img.yzcdn.cn/1.png"
-  text="梦佳，要开心快乐每一天呀！有烦恼找窦先生，fighting！"
+  text="佳佳，要开心快乐每一天呀！有烦恼找窦先生，fighting！"
 />
 	<!-- 搜索目标 -->
 	<view class='searchTarget'>
 		<view class='search'>
       <van-search
 			 value="{{ search }}"
-			 placeholder="梦佳想找什么目标呀"
+			 placeholder="佳佳想找什么目标呀"
 			 background="#ffa5a5"
 			 bind:change="onChange"
 			 bind:search="onSearch"
@@ -30,7 +30,7 @@
 
 	<van-panel
 	 title="每日笑话"
-	 desc="梦佳，再搞笑的笑话，也不如你的微笑甜美"
+	 desc="佳佳，再搞笑的笑话，也不如你的微笑甜美"
 	>
   <view class='joke'>
 		{{joke[current].content}}
@@ -63,7 +63,7 @@
   desc="{{item.expect}}"
   title="{{item.targetName}}"
   thumb="{{ imageURL }}"
-	tag="{{item.progress === 0 ? '要加油咯'  : '梦佳好棒'}}"
+	tag="{{item.progress === 0 ? '要加油咯'  : '佳佳好棒'}}"
 
 	price="开始时间:{{item.startDate}}  结束时间:{{item.endDate}}"
 >
@@ -77,7 +77,7 @@
   desc="{{item.expect}}"
   title="{{item.targetName}}"
   thumb="{{ imageURL }}"
-	tag="{{item.progress === 0 ? '要加油咯'  : '梦佳好棒'}}"
+	tag="{{item.progress === 0 ? '要加油咯'  : '佳佳好棒'}}"
 	price="开始时间:{{item.startDate}}  结束时间:{{item.endDate}}"
 >
 </van-card>
@@ -90,7 +90,7 @@
   desc="{{item.expect}}"
   title="{{item.targetName}}"
   thumb="{{ imageURL }}"
-	tag="{{item.progress === 0 ? '要加油咯'  : '梦佳好棒'}}"
+	tag="{{item.progress === 0 ? '要加油咯'  : '佳佳好棒'}}"
 	price="开始时间:{{item.startDate}}  结束时间:{{item.endDate}}"
 >
 </van-card>

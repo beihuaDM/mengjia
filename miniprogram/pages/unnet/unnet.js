@@ -12,7 +12,7 @@ Page({
 			});
 		} else {
 			wx.showToast({
-				title: '没网呀梦佳',
+				title: '没网呀佳佳',
 				icon: 'none',
 			})
 		}

@@ -95,7 +95,7 @@
 				value="{{ expect }}"
 				label="预期效果"
 				type="textarea"
-				placeholder="梦佳说一说你想达成什么样的成就吧！"
+				placeholder="佳佳说一说你想达成什么样的成就吧！"
 				autosize
 				bind:change="onExpectChange"
 			/>
