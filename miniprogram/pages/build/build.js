@@ -243,7 +243,8 @@ Page({
 								endDateChuo,
 								expect,
 								plan,
-								progress:0
+								progress:0,
+								selected:[]
 							}
 						})
 							.then(res => {
@@ -271,7 +272,8 @@ Page({
 								endDateChuo,
 								expect,
 								plan,
-								progress: 0
+								progress: 0,
+								selected:[]
 							}
 						})
 							.then(res => {

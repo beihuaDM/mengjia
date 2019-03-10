@@ -10,6 +10,22 @@ Page({
 	data: {
 		animationData: {}
 	},
+	/**
+  * 日历是否被打开
+  */
+	bindselect(e) {
+		this.setData({
+			isOpen:e.detail.ischeck
+		});
+
+	},
+  /**
+   * 获取选择日期
+   */
+	bindgetdate(e) {
+		console.log(e.detail);
+		
+	},
 
 	/**
 	 * 生命周期函数--监听页面加载

@@ -5,7 +5,9 @@
 	background-color: #ffa5a5;
 }
 
-.detail view {
+
+
+.detail view.css {
 	width: 100%;
 	font-size: 30rpx;
 	text-align: center;
