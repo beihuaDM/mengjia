@@ -21,6 +21,12 @@
 	font-size: 600; 
 }
 button {
-	background-color: #f44;
+	background-color: red;
 	color: white;
+}
+
+.btn {
+	background-color: red;
+	color: white;
+	margin-top: 30rpx;
 }

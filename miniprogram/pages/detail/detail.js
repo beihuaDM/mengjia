@@ -112,5 +112,30 @@ Page({
 		}).catch(() => {
 			// on cancel
 		});
+	},
+
+	// 删除目标
+	onRemove:function () {
+		Dialog.confirm({
+			title: '删除目标',
+			message: '亲爱的佳佳同学，删除目标后数据该目标数据将被清空哦！'
+		}).then(() => {
+			// on confirm
+			const { _id } = this.data.data;
+			const db = wx.cloud.database();
+			db.collection('target').doc(_id).remove()
+				.then(function () {
+					Toast.success('目标已被删除');
+					setTimeout(function () {
+						wx.switchTab({
+							url: '/pages/index/index'
+						})
+					},1500);
+				})
+				.catch()
+
+		}).catch(() => {
+			// on cancel
+		});
 	}
 })

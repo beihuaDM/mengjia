@@ -42,6 +42,6 @@
 	item="{{data}}"
 	 selected="{{data.selected}}"
 	  bindselect="bindselect" 		     bindgetdate="bindgetdate" />
-
-		
+<button class="btn" bindtap="onRemove">删除目标</button>
+	
 </view>
