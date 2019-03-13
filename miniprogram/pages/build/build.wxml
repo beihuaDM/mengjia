@@ -32,7 +32,9 @@
   desc="呀！我听说张女士要建立目标啦！不错不错，值得鼓励">
 
 	<!-- 目标内容输入 -->
-	<van-popup show="{{ show }}">
+	<van-popup
+	id="van-popup"
+	 show="{{ show }}">
 		<view class='targetPopup'>
 			嗯。。。张女士，既然要建立目标了，就要认真的去执行呀！
 			窦先生可是一直在的哦！被发现了，O(∩_∩)O ，那就不
@@ -43,6 +45,7 @@
 	<!-- 时间选择控件 -->
 	<!-- 开始时间选择 -->
 	<van-popup
+	id="van-popup"
 		show="{{ startDateChoose }}"
 		position="bottom"
 		bind:close="onClose"
@@ -58,6 +61,7 @@
 
 	<!-- 结束时间选择 -->
 	<van-popup
+	id="van-popup"
 		show="{{ endDateChoose }}"
 		position="bottom"
 		bind:close="onClose"

@@ -126,6 +126,11 @@ Component({
 							let year = self.data.canlender.year + "-" + self.data.canlender.month + "-" + self.data.canlender.date
 							let _date = self.getDate(year, 0);
 							console.log(_date);
+							const dataBase = JSON.parse(JSON.stringify(this.data.selected));
+							dataBase.push({date:_date});
+							self.setData({
+								selected:dataBase
+							});
 							const db = wx.cloud.database();
 							const _ = db.command;
 							db.collection('target').doc(self.data.item._id).update({

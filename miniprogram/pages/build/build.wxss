@@ -15,3 +15,6 @@
 	justify-content: center;
 	align-items: center;
 }
+#van-popup,#van-dialog,#van-toast {
+	z-index: 999;
+}
